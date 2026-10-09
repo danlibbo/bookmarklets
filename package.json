@@ -1,0 +1,9 @@
+{
+  "name": "personal-bookmarklets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-contained browser bookmarklets and a drag-to-install page",
+  "type": "module",
+  "scripts": { "build": "node scripts/build.mjs", "check": "node scripts/build.mjs --check" },
+  "engines": { "node": ">=20" }
+}

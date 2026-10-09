@@ -1,0 +1,42 @@
+{
+  "owner": "danlibbo",
+  "repository": "bookmarklets",
+  "bookmarklets": [
+    {
+      "id": "logo-grab",
+      "name": "⬇ Logo Grab",
+      "summary": "Finds the current site's favicon or app icon, prioritises SVG and larger declared sizes, and downloads a square PNG.",
+      "usage": "Open the website you want an icon from, then run Logo Grab. The PNG is named after the site's hostname.",
+      "note": "Uses icons declared by the page, rather than searching page content for a brand logo. The PNG is at least 256 × 256 pixels; enlarging a small icon does not add detail. If CORS prevents export, it shows the original image for manual saving in its original format."
+    },
+    {
+      "id": "passphrases",
+      "name": "Passphrases",
+      "summary": "Creates a three-word passphrase with punctuation, varied initial capitalisation and a two-digit number, then copies it to the clipboard.",
+      "usage": "Run on a normal webpage. A notification shows the generated passphrase; if copying fails, a prompt lets you copy it manually.",
+      "note": "Retains the supplied wordlists, format and Math.random-based generation algorithm. Generates locally without a server request; the notification displays the passphrase on the current page for five seconds.",
+      "upstream": "https://github.com/danlibbo/passphraseGenerator"
+    },
+    {
+      "id": "halo-link",
+      "name": "Halo link",
+      "summary": "Copies a formatted hyperlink to the open Halo ticket, using its ticket number and summary as the link text.",
+      "usage": "Open a ticket in the Halo agent interface, run Halo link, then paste into an application that supports rich text, such as Outlook or Teams.",
+      "note": "Requires the expected ticket number and summary elements and an id URL parameter. Plain-text destinations may discard the hyperlink formatting; Halo interface changes may require selector updates."
+    },
+    {
+      "id": "tidy-rhea",
+      "name": "TidyRhea",
+      "summary": "Adds a collapse/expand button to Rhea's sidebar, giving forms more space and remembering the sidebar preference in this browser.",
+      "usage": "Open Rhea, run TidyRhea, then use the arrow button to toggle the sidebar. Running the bookmarklet again also toggles it.",
+      "note": "Only runs on rhea.private.aus-1.datixcloudiq.com. The preference is stored in that site's local storage. Re-run after a full page reload to restore the control and saved preference."
+    },
+    {
+      "id": "window-resizer",
+      "name": "🪟 Window Resizer",
+      "summary": "Opens the current page in a new window at a preset size or custom width and height.",
+      "usage": "Run on the page you want to resize. Choose 1280 × 720, 1366 × 768 or 1920 × 1080, or enter custom dimensions.",
+      "note": "Requests whole-window dimensions in CSS pixels, including the title bar and borders. Browser and operating-system limits may adjust the actual size. Allow pop-ups for the current site when prompted."
+    }
+  ]
+}
