@@ -37,6 +37,48 @@
       "summary": "Opens the current page in a new window at a preset size or custom width and height.",
       "usage": "Run on the page you want to resize. Choose 1280 × 720, 1366 × 768 or 1920 × 1080, or enter custom dimensions.",
       "note": "Requests whole-window dimensions in CSS pixels, including the title bar and borders. Browser and operating-system limits may adjust the actual size. Allow pop-ups for the current site when prompted."
+    },
+    {
+      "id": "table-to-excel",
+      "name": "Table to Excel",
+      "summary": "Copies a loaded HTML table into Excel or downloads it as a tab-separated file, expanding merged cells.",
+      "usage": "Choose a table from the list or use Pick a table on the page. Copy for Excel includes HTML and plain text where supported; Download TSV exports a UTF-8 tab-separated file.",
+      "note": "Exports loaded rows only, not unseen pages or unloaded virtual rows. Hidden rows are excluded by default. Formula-like text is treated as text by default; this can be disabled. Merged continuation cells are blank. Virtual grids and canvas tables may not expose a usable HTML table."
+    },
+    {
+      "id": "clean-text",
+      "name": "Clean text",
+      "summary": "Converts selected or pasted text to clean plain text, normalising spaces and tidying blank lines.",
+      "usage": "Select text before running, or paste into Input. Choose whether to remove repeated blank lines or join all lines into one paragraph, then copy the result.",
+      "note": "Normalises non-breaking spaces, removes zero-width spaces and trims line edges. Original webpage content is not edited. Plain-text copying removes rich formatting."
+    },
+    {
+      "id": "screenshot-tidy",
+      "name": "Screenshot tidy",
+      "summary": "Automatically covers detectable email addresses, likely phone numbers and names in labelled fields or columns, with manual cover controls.",
+      "usage": "Run before taking a screenshot. Review the automatic masks, add any extra names one per line, or use Click to cover for missed details. Hide controls for 15 seconds while capturing. Escape, Restore page or running it again removes the masks.",
+      "note": "Detection is heuristic: unlabelled names, split text, images, canvas content and embedded frames may be missed, and some numeric IDs may look like phone numbers. Names found in labelled inputs or table columns are also matched elsewhere on the page. Masks are opaque display overlays; underlying page data remains. Review the full intended screenshot before sharing."
+    },
+    {
+      "id": "text-toolkit",
+      "name": "Text toolkit",
+      "summary": "Provides URL and UTF-8 Base64 encoding/decoding, JSON formatting/compacting and GUID generation in a local panel.",
+      "usage": "Select text before running or paste into Input. Choose an operation and click Run. Copy output or use it as the next input. Generate GUID creates a random UUID v4.",
+      "note": "No data is sent to an external service. URL decoding treats + as a literal plus, rather than form-encoded space. Standard Base64 is supported. JSON uses the native parser, so duplicate keys and numbers beyond JavaScript numeric precision require care."
+    },
+    {
+      "id": "utc-converter",
+      "name": "UTC converter",
+      "summary": "Converts timestamps between UTC and Melbourne time, handling AEST/AEDT and daylight-saving transitions.",
+      "usage": "Enter YYYY-MM-DD HH:mm[:ss], an ISO timestamp with Z or a numeric offset, or a 10-digit Unix-seconds / 13-digit Unix-milliseconds timestamp. Choose UTC or Melbourne for input without an offset, then convert.",
+      "note": "Explicit offsets override the input-zone choice. Invalid dates and nonexistent Melbourne wall times are rejected. When clocks move back, an ambiguous Melbourne time requires an earlier/later choice. Output includes UTC, Melbourne with its offset, and Unix timestamps."
+    },
+    {
+      "id": "field-inspector",
+      "name": "Field inspector",
+      "summary": "Inspects a clicked page element and copies its CSS selector or field metadata, including labels, ID, name and accessibility attributes.",
+      "usage": "Choose Pick element, then click a field, label or wrapper. Copy selector for CSS work, or Copy details for the JSON metadata. Escape stops picking; Close removes the tool and highlight.",
+      "note": "Inspects the clicked element, which may be a wrapper rather than the actual input. Generated selectors use IDs where unique and structural selectors otherwise. Selectors inside an open shadow root are scoped to that root. Closed shadow roots and embedded frames are not traversed."
     }
   ]
 }

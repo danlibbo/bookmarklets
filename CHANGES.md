@@ -11,3 +11,9 @@ Small fixes made during packaging:
 - **Window Resizer:** reformatted and decoded; retains the three presets, custom-size form, pop-up handling and whole-window size requests.
 
 The install page, README, bookmark import file and encoded URLs are generated from `catalog.json` and `src/`. The Passphrases upstream link is attribution and reference; no existing GitHub repo has been changed.
+
+## Service desk additions
+
+Added Table to Excel, Clean text, Screenshot tidy, Text toolkit, UTC converter and Field inspector as self-contained bookmarklets. The catalogue now generates 11 entries, with matching import links and encoded URLs.
+
+Screenshot tidy uses opaque, removable overlays with heuristic email/phone/labelled-name detection and manual additions. UTC converter validates dates, uses Melbourne IANA timezone rules and handles ambiguous or nonexistent local times.
